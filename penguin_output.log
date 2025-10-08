@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\tmead\AppData\Roaming\Microsoft\Windows\Start Menu\Program
+> s\Windows PowerShell\penguin_output.log
+  log type:  text
+ opened on:   8 Oct 2025, 08:56:25
+
+. summarize
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     species |          0
+      island |          0
+bill_lengt~m |        342    43.92193    5.459584       32.1       59.6
+bill_depth~m |        342    17.15117    1.974793       13.1       21.5
+flipper_le~m |        342    200.9152    14.06171        172        231
+-------------+---------------------------------------------------------
+ body_mass_g |        342    4201.754    801.9545       2700       6300
+         sex |          0
+        year |        342    2008.029    .8171684       2007       2009
+
+. tabstat body_mass_g, by(species) stats(mean sd n)
+
+Summary for variables: body_mass_g
+Group variable: species 
+
+  species |      Mean        SD         N
+----------+------------------------------
+   Adelie |  3700.662  458.5661       151
+Chinstrap |  3733.088  384.3351        68
+   Gentoo |  5076.016  504.1162       123
+----------+------------------------------
+    Total |  4201.754  801.9545       342
+-----------------------------------------
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\tmead\AppData\Roaming\Microsoft\Windows\Start Menu\Program
+> s\Windows PowerShell\penguin_output.log
+  log type:  text
+ closed on:   8 Oct 2025, 08:56:25
+--------------------------------------------------------------------------------
